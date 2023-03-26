@@ -1,0 +1,45 @@
+.advertisement
+{
+	position: absolute; right:0;top:0;
+	width:100px;
+	height:150px; 
+	border-color:black;
+	border-width:2px; 
+	background-color:gray; 
+	color:white;
+	left: 10px;
+	top: 10px;
+}
+
+.head{
+	position: absolute; right:0px;top:0;
+	top: 610px;
+	left: 660px;
+}
+
+.logo{
+	position: absolute; right:0px;top:0;
+	top: 10px;
+	left: 160px;
+}
+
+.title{
+	position: absolute; right:0px;top:0;
+	top: 10px;
+	left: 625px;
+}
+
+.image img{
+	width: 399px;
+    height: 300px;
+	position: absolute; right:0;top:0;
+	left: 200px;
+	top: 200px;
+	
+}
+
+.main{
+	position: absolute; right:0;top:0;
+	left: 610px;
+	top: 200px;
+}
