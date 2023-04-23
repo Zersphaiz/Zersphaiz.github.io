@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Game</title>
+    <script>
+        var level = 1;                                        //Hocam, timeout değerini ne kadar değiştirirsem değiştireyim, buton tüm seviyelerde çok hızlı hareket ediyor, maalesef sebebini çözemedim.
+        var score = 0;
+
+        function moveButton() {
+            var marginTop = Math.floor(Math.random() * 300) + "px";
+            var marginLeft = Math.floor(Math.random() * 300) + "px";
+            var button = document.getElementById("button");
+            button.style.marginTop = marginTop;
+            button.style.marginLeft = marginLeft;
+            button.style.width = "150px";
+            button.style.height = "50px";
+            button.style.backgroundColor = "blue";
+            button.style.color = "white";
+            button.innerHTML = "Click me!";
+            button.removeEventListener("mouseover", moveButton);
+            setTimeout(function () {
+                button.addEventListener("mouseover", moveButton);
+            }, 500 - (level - 1) * 50);
+        }
+
+        function game() {
+            if (score >= 3) {
+                level++;
+                score = 0;
+                document.getElementById("level").innerHTML = "Level " + level;
+                alert("You are the winner! You can go to level " + level);
+                if (level < 6) {
+                    setTimeout(function () {
+                        game();
+                    }, 2000 - (level - 1) * 100);
+                } else {
+                    setTimeout(function () {
+                        game();
+                    }, 0);
+                }
+            } else {
+                document.getElementById("button").addEventListener("click", function () {
+                    scoreUp();
+                    moveButton();
+                });
+            }
+        }
+
+        function scoreUp() {
+            score++;
+            document.getElementById("score").innerHTML = "Score: " + score;
+            document.getElementById("button").removeEventListener("click", scoreUp);
+            game();
+        }
+    </script>
+</head>
+
+<body onload="game()">
+    <h1 id="level">Level 1</h1>
+    <p id="score">Score: 0</p>
+    <button id="button" onmouseover="moveButton()">CLICK ME</button>
+</body>
+
+</html>
