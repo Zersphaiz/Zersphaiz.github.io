@@ -1,0 +1,1 @@
+var cities = ["Charlotte", "New York", "Washington DC" ];
