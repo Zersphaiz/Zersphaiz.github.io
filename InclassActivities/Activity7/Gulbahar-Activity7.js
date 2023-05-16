@@ -8,7 +8,7 @@ function addScore() {
 	var score = $("score").value;
 
 	if (name.trim() === "" || isNaN(score) || score < 0 || score > 100) {
-		alert("You must enter a name and a valid score.");                    //ALERT DOES NOT WORK
+		alert("You must enter a name and a valid score.");
 	} else {
 		names.push(name);
 		scores.push(score);
