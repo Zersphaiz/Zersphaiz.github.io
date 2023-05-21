@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>STRIKE - Reservation</title>
+  <link rel="stylesheet" type="text/css" href="reservation.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jquery.timepicker.min.css">
+  <script src="jquery.timepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.timepicker.min.css">
+
+  <!--<script>
+    document.querySelector('input[type="submit"]').addEventListener('click', function(event) {
+      var nameSurnameInput = document.getElementById('namesurname');
+      if (nameSurnameInput.value.trim() === '') {
+        event.preventDefault();
+        alert('Please enter your name and surname.');
+        nameSurnameInput.focus();
+      }
+    });
+  </script>-->
+  <script>
+    $(document).ready(function () {
+      $("#datepicker").datepicker({                   //Datepicker Plugin to pick a date on reservation page
+        dateFormat: "dd/mm/yy",
+        minDate: 0,
+        showButtonPanel: true,
+        showAnim: "fade",
+        onSelect: function (dateText, inst) {
+          if (!dateText) {
+            alert("Please select a date.");
+            $(this).val("");
+          }
+        }
+      });
+
+      $('input[type="submit"]').click(function (event) {
+        var selectedDate = $("#datepicker").datepicker("getDate");
+        if (!selectedDate) {
+          event.preventDefault();
+          alert("Please select a date.");
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+    document.getElementById("spinner").addEventListener("change", function () {    //Spinner Plugin to pick the number of people on reservation page
+      var value = parseInt(this.value);
+      if (value < 0) {
+        this.value = 0;
+      } else if (value > 7) {
+        alert("Number of the people cannot be more than 7! Please enter a valid number.");
+        this.value = 7;
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.container :radio').checkboxradio({                    //Checkboxradio Plugin to pick a lounge on reservation page
+        icon: false
+      });
+
+      $('input[type="submit"]').click(function (event) {
+        var checked = $('.container :radio:checked').length > 0;
+        if (!checked) {
+          event.preventDefault();
+          alert("Please select a Lounge option.");
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#timepicker').timepicker({             //Timepicker Plugin to pick a time on reservation page
+        timeFormat: 'hh:mm tt',
+        interval: 30,
+        minTime: '10:00am',
+        maxTime: '9:00pm',
+        defaultTime: '12:00pm',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Strike" />
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nbelements">Home</a></li>
+      <li><a href="food_drinks.html" class="nbelements">Food&Drinks</a></li>
+      <li><a href="bowling.html" class="nbelements">Bowling</a></li>
+      <li><a href="reservation.html" class="nbelements">Reservation</a></li>
+      <li><a href="contact.html" class="nbelements">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <table>
+      <form action="reservation_respond.html" method="POST">
+        <label for="namesurname">Name&Surname:</label>
+        <input type="text" id="namesurname" name="namesurname" required><br>
+
+        <label for="datepicker">Please select a date:</label>
+        <input type="text" id="datepicker"><br>
+
+        <label for="spinner">Select the number of people: </label>
+        <input type="number" id="spinner" min="0" max="7"><br><br>
+
+        <label>Select a Lounge:</label><br>
+        <input type="radio" id="lounge1" name="lounge" value="Lounge-I" required>
+        <label for="lounge1">Lounge-I </label>
+        <input type="radio" id="lounge2" name="lounge" value="Lounge-II">
+        <label for="lounge2">Lounge-II </label>
+        <input type="radio" id="lounge3" name="lounge" value="Lounge-III">
+        <label for="lounge3">Lounge-III </label>
+        <input type="radio" id="lounge4" name="lounge" value="Lounge-IV">
+        <label for="lounge4">Lounge-IV </label>
+        <input type="radio" id="lounge5" name="lounge" value="Lounge-V">
+        <label for="lounge5">Lounge-V </label><br><br>
+
+        <label>Time:</label><br>
+        <input type="time" id="timepicker" name="timepicker" required><br><br>
+
+        <a href="reservation_respond.html"> <input type="submit" value="Submit"></a>
+      </form>
+    </table>
+  </div>
+
+  </div>
+</body>
+
+<footer>
+  <div class="copyright">
+    &copy; 2023 - STRIKE Bowling Lounge and Entertainment Center
+  </div>
+</footer>
+
+</html>

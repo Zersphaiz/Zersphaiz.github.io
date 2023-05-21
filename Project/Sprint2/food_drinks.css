@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-color: wheat;
+    position: absolute;
+    top: 253px;
+    left: 0px;
+    width: 100%;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+    color: burlywood;
+    font-family: "Ink Free";
+    font-size: larger;
+    cursor: pointer;
+    transition: .2s;
+}
+
+li:hover {
+    background-color: burlywood;
+}
+
+.nbelements {
+    text-decoration: none;
+    color: maroon;
+    font-size: 30px;
+}
+
+body {
+    background-color: burlywood;
+    width: auto;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+}
+
+.logo img {
+    width: 175px;
+    height: 253px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    margin: -80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: maroon;
+    font-family: initial;
+    font-size: initial;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    color: black;
+}
+
+.menu {
+    margin: auto;
+    width: 50%;
+    /*max-width: 500px;*/
+    padding: 20px;
+    background-color: burlywood;
+    /*Menu edits*/
+    position: relative;
+    top: 330px;
+}
+
+hr {
+    height: 3px;
+    background-color: brown;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+h1,
+h2 {
+    font-family: "Impact", serif;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.name {
+    width: 69%;
+    color: maroon;
+}
+
+.price {
+    width: 29%;
+    text-align: right;
+    color: maroon;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: brown;
+}
+
+.menu-icon {
+    margin-top: -15px;
+    height: 50px;
+}
+
+.coffee-icon {
+    height: 45px;
+}
