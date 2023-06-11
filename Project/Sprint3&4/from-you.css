@@ -1,0 +1,9 @@
+.random-img-container {
+  margin: 30px auto;
+  max-width: 800px;
+  object-fit: cover;
+}
+
+.random-img {
+  width: 100%;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>                      <!-- This website contains a form and a widget, connected with contact.js-->
+    <title>STRIKE - Contact</title>
+    <link rel="stylesheet" type="text/css" href="contact.css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="stylesheet" type="text/css" href="copyright.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="jquery.autosize.js"></script>
+    <script src="contact.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Strike" />
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nbelements">Home</a></li>
+        <li><a href="food_drinks.html" class="nbelements">Food&Drinks</a></li>
+        <li>
+          <a href="from_you.html" class="nbelements">From You</a>
+        </li>
+        <li><a href="bowling.html" class="nbelements">Bowling</a></li>
+        <li><a href="reservation.html" class="nbelements">Reservation</a></li>
+        <li><a href="contact.html" class="nbelements">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <form class="form" action="contact_respond.html" method="POST">
+        <label for="namesurname">Name&Surname:</label>
+        <input type="text" id="namesurname" name="namesurname" required /><br />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter a valid email address"
+        /><br />
+
+        <label for="Phone">Phone Number:</label>
+        <input
+          type="tel"
+          maxlength="10"
+          minlength="10"
+          id="Phone"
+          name="Phone"
+          required
+          placeholder="Enter a valid phone number"
+        /><br />
+
+        <label for="message">Your message:</label><br />
+        <textarea
+          class="textarea"
+          id="message"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+
+        <a href="contact_respond.html">
+          <input type="submit" value="Submit"
+        /></a>
+      </form>
+
+      <div class="info">
+        E-mail Address: loungestrike@gmail.com<br /><br />
+        Phone: +44 20 7619 5003<br /><br />
+        Location: 20, Queensway,London, E10 5GR
+      </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        &copy; 2023 - STRIKE Bowling Lounge and Entertainment Center
+      </div>
+    </footer>
+  </body>
+</html>

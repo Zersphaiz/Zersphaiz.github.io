@@ -1,0 +1,16 @@
+.group img {
+  position: relative;
+  width: 981px;
+  height: 653px;
+  display: block;
+  margin: 30px auto;
+}
+
+.l-paragraph {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  font-family: "Gabriola";
+  font-size: 30px;
+  color: maroon;
+}

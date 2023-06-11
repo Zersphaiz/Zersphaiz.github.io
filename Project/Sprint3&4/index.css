@@ -1,0 +1,13 @@
+.welcomeimg {
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+.welcometxt {
+  margin: 20px auto 0;
+  /*Welcome image location and style edits*/
+  text-align: center;
+  font-family: "Gabriola";
+  font-size: 30px;
+  color: maroon;
+}

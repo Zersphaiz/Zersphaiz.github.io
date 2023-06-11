@@ -1,0 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /*General layout*/
+}
+
+nav {
+  background-color: wheat;
+  /*Navigation bar style edits*/
+  width: 100%;
+}
+
+nav ul {
+  text-align: center;
+  /*Navigation bar style edit*/
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+  color: burlywood;
+  /*Navigation bar content style edits*/
+  font-family: "Ink Free";
+  font-size: larger;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li:hover {
+  background-color: burlywood;
+  /*Effect*/
+}
+
+.nbelements {
+  text-decoration: none;
+  /*Navigation bar content style edits*/
+  color: maroon;
+  font-size: 30px;
+}
+
+body {
+  background-color: burlywood;
+  width: auto;
+  /*General background edit*/
+}
+
+.logo {
+  max-width: max-content;
+  margin: 10px auto;
+}
+
+.logo img {
+  width: 175px;
+  /*Logo size*/
+  height: 253px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>                        <!-- This website contains 4 plugins, connected with contact.js-->
+    <title>STRIKE - Reservation</title>
+    <link rel="stylesheet" type="text/css" href="reservation.css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="stylesheet" type="text/css" href="copyright.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery.timepicker.min.css" />
+    <script src="jquery.timepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.timepicker.min.css" />
+    <script src="reservation.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Strike" />
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nbelements">Home</a></li>
+        <li><a href="food_drinks.html" class="nbelements">Food&Drinks</a></li>
+        <li>
+          <a href="from_you.html" class="nbelements">From You</a>
+        </li>
+        <li><a href="bowling.html" class="nbelements">Bowling</a></li>
+        <li><a href="reservation.html" class="nbelements">Reservation</a></li>
+        <li><a href="contact.html" class="nbelements">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <table>
+        <form
+          action="reservation_respond.html"
+          method="POST"
+          id="reservation-form"
+        >
+          <label for="namesurname">Name&Surname:</label>
+          <input
+            type="text"
+            id="namesurname"
+            name="namesurname"
+            required
+          /><br />
+
+          <label for="datepicker">Please select a date: </label>
+          <input type="text" id="datepicker" style="width: 95px" /><br />
+
+          <label for="spinner">Select the number of people: </label>
+          <input type="number" id="spinner" min="0" max="7" /><br /><br />
+
+          <label>Select a Lounge:</label><br />
+          <input
+            type="radio"
+            id="lounge1"
+            name="lounge"
+            value="Lounge-I"
+            required
+          />
+          <label for="lounge1">Lounge-I </label>
+          <input type="radio" id="lounge2" name="lounge" value="Lounge-II" />
+          <label for="lounge2">Lounge-II </label>
+          <input type="radio" id="lounge3" name="lounge" value="Lounge-III" />
+          <label for="lounge3">Lounge-III </label>
+          <input type="radio" id="lounge4" name="lounge" value="Lounge-IV" />
+          <label for="lounge4">Lounge-IV </label>
+          <input type="radio" id="lounge5" name="lounge" value="Lounge-V" />
+          <label for="lounge5">Lounge-V </label><br /><br />
+
+          <label>Time:</label><br />
+          <input
+            type="time"
+            id="timepicker"
+            name="timepicker"
+            required
+          /><br /><br />
+
+          <a href="reservation_respond.html">
+            <input type="submit" value="Submit"
+          /></a>
+        </form>
+      </table>
+    </div>
+    <footer>
+      <div class="copyright">
+        &copy; 2023 - STRIKE Bowling Lounge and Entertainment Center
+      </div>
+    </footer>
+  </body>
+</html>
